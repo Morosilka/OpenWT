@@ -1,0 +1,30 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Boat Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="BoatName"
+        placeholder="Enter Boat Name">
+    </div>
+
+    <label class="col-sm-2 col-form-label">User Id</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="UserId"
+        placeholder="Enter User Id">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Boat Description</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="BoatDescription"
+        placeholder="Enter Boat Description">
+    </div>
+
+ 
+</div>
+
+<button (click)="addBoat()" *ngIf="boat.BoatId==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateBoat()" *ngIf="boat.BoatId!=0" class="btn btn-primary">
+    Update
+</button>
